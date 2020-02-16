@@ -8,6 +8,24 @@
 // Output: [1,3]
 
 const occurrenceFilter = (arr, n) => {
+    let obj = {};
+    for (let i of arr) {
+        if(!obj[i]) {
+            obj[i] = 1;
+        } else {
+            obj[i] += 1;
+        }
+    }
+
+    let returnArr = [];
+
+    for(let i in obj) {
+        if(obj[i] >= n) {
+            returnArr.push()
+        }
+    }
+
+    console.log(obj)
 
 }
 
