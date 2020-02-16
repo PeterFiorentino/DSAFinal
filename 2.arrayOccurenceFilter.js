@@ -21,12 +21,11 @@ const occurrenceFilter = (arr, n) => {
 
     for(let i in obj) {
         if(obj[i] >= n) {
-            returnArr.push()
+            returnArr.push(i)
         }
     }
 
-    console.log(obj)
-
+    console.log(returnArr)
 }
 
 occurrenceFilter([1, 3, 4, 1, 9, 1, 3, 4, 3, 1, 2], 3) // Returns [1, 3]

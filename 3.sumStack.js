@@ -34,7 +34,13 @@ s.push(14)
 
 // Implement your function here
 const sum = (stack) => {
-
+  let sum = 0;
+  while(!stack.isEmpty()) {
+    sum += stack.peek();
+    stack.pop()
+  }
+  console.log(sum)
 }
 
 sum(s) // should return 482
+

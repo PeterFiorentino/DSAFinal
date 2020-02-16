@@ -36,7 +36,21 @@ q.enqueue(98)
 
 // Write your function here
 const range = (queue) => {
+  let min = 0;
+  let max = 0;
+  
 
+  while(!queue.isEmpty()) {
+    if(queue.peek() > max) {
+      max = queue.peek();
+    }
+    if(queue.peek() < min) {
+      min = queue.peek()
+    }
+    queue.dequeue()
+  }
+  let answer = max-min;
+  console.log(answer)
 }
 
 // Example
