@@ -16,3 +16,4 @@ const bar = (arr) => {
     foo(arr)
   })
 }
+

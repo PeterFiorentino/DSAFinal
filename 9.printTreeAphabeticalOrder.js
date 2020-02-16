@@ -46,8 +46,46 @@ h.right = i;
 
 // Implement your code here
 const printTreeAlphabeticalOrder = (root) => {
-
+  let currentNode = root;
+  if(currentNode.left) {
+    while(currentNode.left.left) {
+      currentNode = currentNode.left;
+    }
+    if(currentNode === root) {
+      console.log(currentNode.val)
+      currentNode.left = null;
+      printTreeAlphabeticalOrder(root)
+    } else {
+      if(currentNode.left.val) {
+      console.log(currentNode.left.val)}
+      console.log(currentNode.val) 
+      console.log(currentNode.right.val)
+      currentNode.left = null;
+      currentNode.right = null;
+      currentNode.val = null
+      printTreeAlphabeticalOrder(root)
+    }
+  } else {
+    if(!currentNode.right.left.left) {
+      console.log(currentNode.right.val)
+      console.log(currentNode.right.right.val)
+      return;
+    } else {
+        while(currentNode.right.left) {
+          currentNode = currentNode.right.left;
+        }
+          if(currentNode.left.val) {
+          console.log(currentNode.left.val)}
+          console.log(currentNode.val) 
+          console.log(currentNode.right.val)
+          currentNode.left = null;
+          currentNode.right = null;
+          // currentNode.val = null
+          printTreeAlphabeticalOrder(root)
+      }  
+  }
 }
+
 
 printTreeAlphabeticalOrder(f)
 // Should print
