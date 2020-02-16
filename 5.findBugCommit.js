@@ -109,7 +109,15 @@ let commits = [
 ]
 
 const identifyFirstBadCommit = (commits) => {
-
+  let theBadCommit = {};
+  for(let i = 0; i <= commits.length; i++) {
+    if(commits[i].status === "bad") {
+      theBadCommit["commit"] = commits[i];
+      theBadCommit["index"] = i;
+      break
+    }
+  }
+  console.log(theBadCommit)
 }
 
 identifyFirstBadCommit(commits)

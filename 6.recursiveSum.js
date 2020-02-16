@@ -5,7 +5,18 @@
 
 
 const recursiveSum = (arr) => {
-
+    if(arr.length === 1) {
+        console.log(arr[0])
+        return;
+    } else {
+        let newArr = [];
+        let sum = arr[0] + arr[1];
+        newArr.push(sum);
+        for(let i = 2; i <= arr.length -1; i++) {
+            newArr.push(arr[i])
+        }
+        recursiveSum(newArr)
+    }  
 }
 
 const arr1 = [5, 2, 9, 11]
